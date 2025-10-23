@@ -354,6 +354,7 @@ h1{ color:var(--accent); }
 <!-- 📢 페이지 넘김 효과음 -->
 <audio id="pageSound" src="pagesound.wav" preload="auto"></audio>
 <script>
+	document.addEventListener('DOMContentLoaded', () => {
 /* ===== 시계/지표 ===== */
 let started=false;
 let cur=new Date('2025-01-01T00:00:00');
@@ -1002,6 +1003,10 @@ function setAccent(hex){
 /* 초기 세팅 */
 ensureBook('기본', FULL_TEXT);
 setAccent('#0000FF');   // 시작 테마
+		ensureBook('기본', FULL_TEXT);
+  setAccent('#0000FF');
+}); // <-- DOMContentLoaded 끝
+</script>
 </script>
 </body>
 </html>
